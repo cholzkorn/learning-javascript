@@ -1,0 +1,1 @@
+This is a repository for learning JavaScript and related projects.

@@ -1,0 +1,12 @@
+npm is installed with node.js
+install JSONView for Browser (Chrome): https://jsonview.com/
+install POSTMAN: https://www.getpostman.com/ or Chrome Extension
+
+
+then install (console):
+npm install -g jsonlint
+npm install -g json
+npm install -g ujs-jsonvalidate
+npm install -g http-server
+npm install -g json-server
+

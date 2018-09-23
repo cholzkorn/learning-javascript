@@ -1,0 +1,9 @@
+npm install create-react-app -g
+
+(navigate to folder)
+
+create-react-app name-of-app
+
+cd weather-app
+
+npm start

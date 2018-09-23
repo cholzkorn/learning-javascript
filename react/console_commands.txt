@@ -7,3 +7,5 @@ create-react-app name-of-app
 cd weather-app
 
 npm start
+
+npm install bootstrap@3.3.7 --save

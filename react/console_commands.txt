@@ -9,3 +9,9 @@ cd weather-app
 npm start
 
 npm install bootstrap@3.3.7 --save
+
+
+
+(compile a build -> first end localhost)
+
+npm run build

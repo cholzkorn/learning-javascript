@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Is this a triangle? Find out!</title>
+  <script type="text/javascript">
+    function get_elements(){
+      var a = document.getElementById("one").value;
+      var b = document.getElementById("two").value;
+      var c = document.getElementById("three").value;
+    }
+
+    function is_triangle(a, b, c){
+      document.write(a);
+    }
+  </script>
+</head>
+<body>
+
+<form class="" action="javascript: return is_triangle()" method="post" name="triangle">
+  <p>length of side 1:
+  <input type="number" name="one" id="one" value="value"
+   onchange="get_elements()"> </p>
+  <p>length of side 2:
+  <input type="number" name="two" id="two" value="value"
+   onchange="get_elements()"> </p>
+  <p>length of side 3:
+  <input type="number" name="three" id="three" value="value"
+   onchange="get_elements()"> </p>
+  <input type="submit" onclick="is_triangle()">
+</form>
+
+</body>
+</html>

@@ -1,32 +1,30 @@
 <html>
 <head>
   <title>Is this a triangle? Find out!</title>
-  <script type="text/javascript">
-    function get_elements(){
-      var a = document.getElementById("one").value;
-      var b = document.getElementById("two").value;
-      var c = document.getElementById("three").value;
-    }
-
-    function is_triangle(a, b, c){
-      document.write(a);
-    }
-  </script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css"
+   href="https://bootswatch.com/4/cerulean/bootstrap.min.css"></link>
 </head>
-<body>
+<body style="margin-left: 2%;">
 
-<form class="" action="javascript: return is_triangle()" method="post" name="triangle">
+<h1>Will it triangle?</h1>
+
+<br>
+
+<form method="post" action="javascript: " name="triangle">
   <p>length of side 1:
-  <input type="number" name="one" id="one" value="value"
-   onchange="get_elements()"> </p>
+  <input type="number" name="a" id="a"></p>
   <p>length of side 2:
-  <input type="number" name="two" id="two" value="value"
-   onchange="get_elements()"> </p>
+  <input type="number" name="b" id="b"></p>
   <p>length of side 3:
-  <input type="number" name="three" id="three" value="value"
-   onchange="get_elements()"> </p>
-  <input type="submit" onclick="is_triangle()">
+  <input type="number" name="c" id="c"></p>
+  <button onclick="is_triangle(
+   document.getElementById('a').value,
+   document.getElementById('b').value,
+   document.getElementById('c').value
+   )">Submit</button>
 </form>
 
+<div id="output"><div>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <head>
   <title>Is this a triangle? Find out!</title>
-  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css"
    href="https://bootswatch.com/4/cerulean/bootstrap.min.css"></link>
+   <script type="text/javascript" src="script.js"></script>
 </head>
 <body style="margin-left: 2%;">
 
@@ -22,9 +22,21 @@
    document.getElementById('a').value,
    document.getElementById('b').value,
    document.getElementById('c').value
-   )">Submit</button>
+   );
+
+    draw_triangle(
+    document.getElementById('a').value,
+    document.getElementById('b').value,
+    document.getElementById('c').value
+    )
+
+   ">Submit</button>
 </form>
 
 <div id="output"><div>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+
+
 </body>
 </html>

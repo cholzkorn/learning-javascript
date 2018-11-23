@@ -15,35 +15,40 @@ function draw_triangle(a, b, c){
   a = parseInt(a);
   b = parseInt(b);
   c = parseInt(c);
+    // scaling the triangle
+
+  var triangle = [a, b, c];
+  var hypo = Math.max.apply(null, triangle);
+  var scaler = 300 / hypo
+
+  var triangle_s = triangle.map(function(x){return x * scaler;});
 
   // selecting canvas
   var canvasElement = document.getElementById('canvas');
   var context = canvasElement.getContext('2d');
 
-  // the triangle
-  context.beginPath();
-  context.moveTo(100, 100);
-  context.lineTo(a, 100);
-  context.lineTo(c, b);
-  context.closePath();
+  // clearing canvas
+  context.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
-  // the outline
-  context.lineWidth = 10;
-  context.strokeStyle = '#666666';
-  context.stroke();
+  if ((a + b) > c && (b + c) > a && (a + c) > b) {
 
-  // the fill color
-  context.fillStyle = "#FFCC00";
-  context.fill();
-}
+    // the triangle
+    context.beginPath();
+    context.moveTo(100, 100);
+    context.lineTo(triangle_s[0], 100);
+    context.lineTo(triangle_s[2], triangle_s[1]);
+    context.closePath();
 
-function js_function(){
-   console.log("function was called");
+    // the outline
+    context.lineWidth = 5;
+    context.strokeStyle = 'black';
+    context.stroke();
 
-   // selecting canvas
-   var canvasElement = document.getElementById('canvas');
-   var context = canvasElement.getContext('2d');
-
-   context.font = '48px serif';
-   context.fillText('Works for me', 1, 50);
+    // the fill color
+    context.fillStyle = "#2FA4E7";
+    context.fill();
+  }
+  else{
+    console.log('not a triangle');
+  }
 }

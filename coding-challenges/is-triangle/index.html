@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Is this a triangle? Find out!</title>
@@ -11,14 +12,14 @@
 
 <br>
 
-<form method="post" action="javascript: " name="triangle">
+<form method="post" action="javascript: script.js" name="triangle">
   <p>length of side 1:
   <input type="number" name="a" id="a"></p>
   <p>length of side 2:
   <input type="number" name="b" id="b"></p>
   <p>length of side 3:
   <input type="number" name="c" id="c"></p>
-  <button onclick="is_triangle(
+  <button type="button" onclick="is_triangle(
    document.getElementById('a').value,
    document.getElementById('b').value,
    document.getElementById('c').value
@@ -33,7 +34,7 @@
    ">Submit</button>
 </form>
 
-<div id="output"><div>
+<div id="output"></div>
 
 <canvas id="canvas" width="500" height="500"></canvas>
 

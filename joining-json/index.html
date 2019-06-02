@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>Joining JSON</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var colors = {"COLORS":[ {"1": 'red'}, { "2": 'yellow'}, {"3":'orange'}]}
+
+      // Colors
+
+      function colors_out(){
+        document.getElementById('colors').innerHTML = JSON.stringify(colors);
+      }
+
+      var fruits = {"FRUITS":[ {"1":'apple'}, { "2": 'banana'}, {"3":'orange'}]}
+
+      // Fruits
+
+      function fruits_out(){
+        document.getElementById('fruits').innerHTML = JSON.stringify(fruits);
+      }
+
+      var newFruits = {"NEW_FRUITS": [] }
+
+      // Merge
+
+      if(colors.COLORS.length == fruits.FRUITS.length){
+          var temp, first;
+          $.each(fruits.FRUITS, function(i){
+              for(first in this)break;
+              temp = {};
+              temp[first] = [];
+              temp[first].push(this[first]);
+              temp[first].push(colors.COLORS[i][first]);
+              newFruits.NEW_FRUITS.push(temp);
+          });
+      };
+
+      console.log(newFruits);
+
+      function newFruits_out(){
+        document.getElementById('newFruits').innerHTML = JSON.stringify(newFruits);
+      }
+    </script>
+
+
+    <div id="colors">Colors go here</div>
+    <button type="button" name="getcolors" onclick="colors_out()">get colors</button>
+    <br>
+
+    <div id="fruits">Fruits go here</div>
+    <button type="button" name="getfruits" onclick="fruits_out()">get fruits</button>
+    <br>
+
+    <div id="newFruits">Merged items go here</div>
+    <button type="button" name="getnewfruits" onclick="newFruits_out()">merge items</button>
+    <br>
+
+  </body>
+</html>

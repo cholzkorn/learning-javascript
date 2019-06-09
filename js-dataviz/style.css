@@ -1,0 +1,11 @@
+body {
+    background-color:beige;
+}
+
+canvas{
+    box-shadow:3px 3px grey ;
+    border:1px solid black;
+    margin-bottom:1em;
+    padding:1em 0 1em 0;
+    background-color:#fcfcfc;
+}

@@ -7,22 +7,23 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+      <h1>Created with chart.js</h1>
         <canvas id="bar-chart" width="800" height="450"></canvas>
         <script>
         let data={};
-        data.html=2108;
-        data.js=1479;
-        data.cpp=2275;
-        data.php=600;
+        data.one=2108;
+        data.two=1479;
+        data.three=2275;
+        data.four=600;
         // Bar chart
-            new Chart(document.getElementById("bar-chart"), { type: 'bar', data: { labels: ["HTML", "Javascript", "C++", "PHP"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.html,data.js,data.cpp,data.php] } ] }, options: { legend: { display: false }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("bar-chart"), { type: 'bar', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.one,data.two,data.three,data.four] } ] }, options: { legend: { display: false }, title: { display: true, text: 'I am a bar chart' } } });
 
         </script>
                 <canvas id="pie-chart" width="800" height="450"></canvas>
         <script>
 
         // pie chart
-            new Chart(document.getElementById("pie-chart"), { type: 'pie', data: { labels: ["HTML", "Javascript", "C++", "PHP"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.html,data.js,data.cpp,data.php] } ] }, options: { legend: { display: true,labels:{fontFamily:"monospace"} }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("pie-chart"), { type: 'pie', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.one,data.two,data.three,data.four] } ] }, options: { legend: { display: true,labels:{fontFamily:"monospace"} }, title: { display: true, text: 'I am a pie chart' } } });
 
         </script>
 
@@ -31,28 +32,28 @@
         <script>
 
         // radar chart
-            new Chart(document.getElementById("radar-chart"), { type: 'radar', data: { labels: ["HTML", "Javascript", "C++", "PHP","Python"], datasets: [ { label: "Experience", backgroundColor: "rgba(0,0,0,0.2)",borderColor: "rgba(0,0,0,0.5)", pointBackgroundColor: ["salmon","khaki","lightblue","plum","lightgreen"],data: [data.html,data.js,data.cpp,data.php,453] } ] }, options: { legend: { display: false }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("radar-chart"), { type: 'radar', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: "rgba(0,0,0,0.2)",borderColor: "rgba(0,0,0,0.5)", pointBackgroundColor: ["salmon","khaki","lightblue","plum","lightgreen"],data: [data.one,data.two,data.three,data.four,453] } ] }, options: { legend: { display: false }, title: { display: true, text: 'I am a radar chart' } } });
 
         </script>
         <canvas id="doughnut-chart" width="800" height="450"></canvas>
         <script>
 
         // doughnut chart
-            new Chart(document.getElementById("doughnut-chart"), { type: 'doughnut', data: { labels: ["HTML", "Javascript", "C++", "PHP"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.html,data.js,data.cpp,data.php] } ] }, options: { legend: { display: true }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("doughnut-chart"), { type: 'doughnut', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.one,data.two,data.three,data.four] } ] }, options: { legend: { display: true }, title: { display: true, text: 'I am a doughnut chart' } } });
 
         </script>
         <canvas id="polar-chart" width="800" height="450"></canvas>
         <script>
 
         // polar chart
-            new Chart(document.getElementById("polar-chart"), { type: 'polarArea', data: { labels: ["HTML", "Javascript", "C++", "PHP"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.html,data.js,data.cpp,data.php] } ] }, options: {layout: { padding: { left: 0, right: 0, top: 0, bottom: 5 } },legend: { display: true }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("polar-chart"), { type: 'polarArea', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.one,data.two,data.three,data.four] } ] }, options: {layout: { padding: { left: 0, right: 0, top: 0, bottom: 5 } },legend: { display: true }, title: { display: true, text: 'I am a polar chart' } } });
 
         </script>
         <canvas id="horizontal-chart" width="800" height="450"></canvas>
         <script>
 
         // hkrizontal bar chart
-            new Chart(document.getElementById("horizontal-chart"), { type: 'horizontalBar', data: { labels: ["HTML", "Javascript", "C++", "PHP"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.html,data.js,data.cpp,data.php] } ] }, options: { legend: { display: false }, title: { display: true, text: 'My Experience Points' } } });
+            new Chart(document.getElementById("horizontal-chart"), { type: 'horizontalBar', data: { labels: ["one", "two", "three", "four"], datasets: [ { label: "Experience", backgroundColor: ["salmon", "khaki","lightblue","thistle"], data: [data.one,data.two,data.three,data.four] } ] }, options: { legend: { display: false }, title: { display: true, text: 'I am a horizontal bar chart' } } });
 
         </script>
 

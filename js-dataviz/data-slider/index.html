@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <title>Interactive data slider</title>
+  </head>
+  <body>
+    <div id="plotareathree"></div>
+    <canvas id="thirdplot" width="300" height="300"></canvas>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        reset_third_plot();
+        thirdplot();
+      });
+    </script>
+    <div class="rangeslider">
+      <input type="range" min="1" max="100" value="10" id="slideone"
+      class="myslider" onchange="reset_third_plot; update_one(); thirdplot();">
+      <span id="outone"></span><br>
+
+      <input type="range" min="1" max="100" value="10" id="slidetwo"
+      class="myslider" onchange="reset_third_plot; update_two(); thirdplot();">
+      <span id="outtwo"></span><br>
+
+      <input type="range" min="1" max="100" value="10" id="slidethree"
+      class="myslider" onchange="reset_third_plot; update_three(); thirdplot();">
+      <span id="outthree"></span><br>
+
+      <input type="range" min="1" max="100" value="10" id="slidefour"
+      class="myslider" onchange="reset_third_plot; update_four(); thirdplot();">
+      <span id="outfour"></span><br>
+    </div>
+  </body>
+</html>
